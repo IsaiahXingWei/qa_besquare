@@ -1,0 +1,1613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220924 19:06:36.207" rpa="false" schemaversion="3">
+<suite id="s1" name="Close" source="/home/tan/Desktop/Automation Folder/Close Account Automation Test/close.robot">
+<test id="s1-t1" name="1. Access Close Account Settings Page" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://app.deriv.com/account/closing-account</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220924 19:06:36.293" level="INFO">Opening browser 'chrome' to base url 'https://app.deriv.com/account/closing-account'.</msg>
+<status status="PASS" starttime="20220924 19:06:36.293" endtime="20220924 19:06:42.234"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220924 19:06:42.234" endtime="20220924 19:06:42.338"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:42.338" endtime="20220924 19:06:42.350"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>set own email</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:42.351" level="INFO">Typing text 'set own email' into text field '//input[@type='email']'.</msg>
+<status status="PASS" starttime="20220924 19:06:42.350" endtime="20220924 19:06:42.420"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='password']</arg>
+<arg>set own password</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:42.421" level="INFO">Typing text 'set own password' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20220924 19:06:42.420" endtime="20220924 19:06:42.477"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:42.477" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220924 19:06:42.477" endtime="20220924 19:06:45.740"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:36.292" endtime="20220924 19:06:45.742"/>
+</test>
+<test id="s1-t2" name="TC01: Accessing the Security and Privacy policy" line="17">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[@href='https://deriv.com/tnc/security-and-privacy.pdf']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220924 19:06:45.743" endtime="20220924 19:06:45.776"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:45.743" endtime="20220924 19:06:45.777"/>
+</test>
+<test id="s1-t3" name="TC02: User presses the “Cancel” button" line="22">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220924 19:06:45.778" endtime="20220924 19:06:45.801"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:45.802" level="INFO">Clicking element '//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']'.</msg>
+<status status="PASS" starttime="20220924 19:06:45.802" endtime="20220924 19:06:45.903"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:45.903" endtime="20220924 19:06:45.928"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220924 19:06:45.936" level="INFO">Current page does not contain element '//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']'.</msg>
+<status status="PASS" starttime="20220924 19:06:45.928" endtime="20220924 19:06:45.936"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:45.777" endtime="20220924 19:06:45.936"/>
+</test>
+<test id="s1-t4" name="Reset State" line="29">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220924 19:06:45.937" endtime="20220924 19:06:45.996"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://app.deriv.com/account/closing-account</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220924 19:06:45.997" level="INFO">Opening browser 'chrome' to base url 'https://app.deriv.com/account/closing-account'.</msg>
+<status status="PASS" starttime="20220924 19:06:45.997" endtime="20220924 19:06:52.263"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220924 19:06:52.263" endtime="20220924 19:06:52.368"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:52.368" endtime="20220924 19:06:52.380"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>set own email</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:52.380" level="INFO">Typing text 'set own email' into text field '//input[@type='email']'.</msg>
+<status status="PASS" starttime="20220924 19:06:52.380" endtime="20220924 19:06:52.441"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='password']</arg>
+<arg>set own password</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:52.441" level="INFO">Typing text 'set own password' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20220924 19:06:52.441" endtime="20220924 19:06:52.508"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:52.508" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220924 19:06:52.508" endtime="20220924 19:06:55.614"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:45.937" endtime="20220924 19:06:55.615"/>
+</test>
+<test id="s1-t5" name="TC03: User presses the “Close my account” button" line="38">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220924 19:06:55.617" endtime="20220924 19:06:55.649"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:55.649" level="INFO">Clicking element '//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']'.</msg>
+<status status="PASS" starttime="20220924 19:06:55.649" endtime="20220924 19:06:55.711"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:55.616" endtime="20220924 19:06:55.711"/>
+</test>
+<test id="s1-t6" name="TC04.1: User does not click on any of the reasons and attempts to close account" line="42">
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//span[@class='dc-checkbox__box dc-checkbox__box--active']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220924 19:06:55.743" level="INFO">Current page does not contain element '//span[@class='dc-checkbox__box dc-checkbox__box--active']'.</msg>
+<status status="PASS" starttime="20220924 19:06:55.712" endtime="20220924 19:06:55.744"/>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" starttime="20220924 19:06:55.744" endtime="20220924 19:06:55.771"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:55.711" endtime="20220924 19:06:55.772"/>
+</test>
+<test id="s1-t7" name="TC04.2: User presses on only 1 reason" line="48">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(., 'I have other financial priorities.')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:55.772" level="INFO">Clicking element '//span[contains(., 'I have other financial priorities.')]'.</msg>
+<status status="PASS" starttime="20220924 19:06:55.772" endtime="20220924 19:06:55.837"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220924 19:06:55.837" endtime="20220924 19:06:55.887"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//span[@class='dc-checkbox__box dc-checkbox__box--disabled']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220924 19:06:55.909" level="INFO">Current page does not contain element '//span[@class='dc-checkbox__box dc-checkbox__box--disabled']'.</msg>
+<status status="PASS" starttime="20220924 19:06:55.887" endtime="20220924 19:06:55.909"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:55.772" endtime="20220924 19:06:55.909"/>
+</test>
+<test id="s1-t8" name="TC04.3: User presses on only 2 reasons" line="55">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(., 'I want to stop myself from trading.')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:55.910" level="INFO">Clicking element '//span[contains(., 'I want to stop myself from trading.')]'.</msg>
+<status status="PASS" starttime="20220924 19:06:55.910" endtime="20220924 19:06:55.977"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220924 19:06:55.977" endtime="20220924 19:06:56.015"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//span[@class='dc-checkbox__box dc-checkbox__box--disabled']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220924 19:06:56.025" level="INFO">Current page does not contain element '//span[@class='dc-checkbox__box dc-checkbox__box--disabled']'.</msg>
+<status status="PASS" starttime="20220924 19:06:56.015" endtime="20220924 19:06:56.025"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:55.910" endtime="20220924 19:06:56.025"/>
+</test>
+<test id="s1-t9" name="TC04.4: User presses on 3 reasons" line="63">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(., 'I’m no longer interested in trading.')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:56.026" level="INFO">Clicking element '//span[contains(., 'I’m no longer interested in trading.')]'.</msg>
+<status status="PASS" starttime="20220924 19:06:56.026" endtime="20220924 19:06:56.109"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220924 19:06:56.109" endtime="20220924 19:06:56.130"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[@class='dc-checkbox__box dc-checkbox__box--disabled']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:56.130" endtime="20220924 19:06:56.140"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//span[@class='dc-checkbox__box dc-checkbox__box--disabled']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220924 19:06:56.147" level="INFO">Current page contains element '//span[@class='dc-checkbox__box dc-checkbox__box--disabled']'.</msg>
+<status status="PASS" starttime="20220924 19:06:56.141" endtime="20220924 19:06:56.147"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:56.026" endtime="20220924 19:06:56.147"/>
+</test>
+<test id="s1-t10" name="TC05: “What other trading platforms do you use” textbox functionality" line="72">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//textarea[@name='other_trading_platforms']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:56.149" level="INFO">Clicking element '//textarea[@name='other_trading_platforms']'.</msg>
+<status status="PASS" starttime="20220924 19:06:56.148" endtime="20220924 19:06:56.194"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>aaa</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.195" level="INFO">Sending key(s) ('aaa',) to page.</msg>
+<msg timestamp="20220924 19:06:56.195" level="INFO">Sending keys aaa</msg>
+<status status="PASS" starttime="20220924 19:06:56.194" endtime="20220924 19:06:56.241"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//textarea[@name='other_trading_platforms' and contains(.,'aaa')]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:56.241" endtime="20220924 19:06:56.254"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//textarea[@name='other_trading_platforms' and contains(.,'aaa')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220924 19:06:56.264" level="INFO">Current page contains element '//textarea[@name='other_trading_platforms' and contains(.,'aaa')]'.</msg>
+<status status="PASS" starttime="20220924 19:06:56.255" endtime="20220924 19:06:56.264"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:56.148" endtime="20220924 19:06:56.265"/>
+</test>
+<test id="s1-t11" name="TC06: “What could we improve” textbox functionality" line="81">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//textarea[@name='do_to_improve']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:56.267" level="INFO">Clicking element '//textarea[@name='do_to_improve']'.</msg>
+<status status="PASS" starttime="20220924 19:06:56.266" endtime="20220924 19:06:56.336"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>aaa</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.337" level="INFO">Sending key(s) ('aaa',) to page.</msg>
+<msg timestamp="20220924 19:06:56.338" level="INFO">Sending keys aaa</msg>
+<status status="PASS" starttime="20220924 19:06:56.336" endtime="20220924 19:06:56.404"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//textarea[@name='do_to_improve' and contains(.,'aaa')]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:56.405" endtime="20220924 19:06:56.416"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//textarea[@name='do_to_improve' and contains(.,'aaa')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220924 19:06:56.424" level="INFO">Current page contains element '//textarea[@name='do_to_improve' and contains(.,'aaa')]'.</msg>
+<status status="PASS" starttime="20220924 19:06:56.417" endtime="20220924 19:06:56.424"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>CTRL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.424" level="INFO">Sending key(s) ('CTRL+A',) to page.</msg>
+<msg timestamp="20220924 19:06:56.424" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20220924 19:06:56.424" level="INFO">Sending key A</msg>
+<msg timestamp="20220924 19:06:56.424" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20220924 19:06:56.424" endtime="20220924 19:06:56.430"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.431" level="INFO">Sending key(s) ('BACKSPACE',) to page.</msg>
+<msg timestamp="20220924 19:06:56.431" level="INFO">Pressing special key BACKSPACE to browser.</msg>
+<msg timestamp="20220924 19:06:56.431" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20220924 19:06:56.431" endtime="20220924 19:06:56.444"/>
+</kw>
+<kw name="Repeat Keyword" library="BuiltIn">
+<arg>120 times</arg>
+<arg>Press Keys</arg>
+<arg>None</arg>
+<arg>a</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<msg timestamp="20220924 19:06:56.445" level="INFO">Repeating keyword, round 1/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.446" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.446" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.445" endtime="20220924 19:06:56.514"/>
+</kw>
+<msg timestamp="20220924 19:06:56.514" level="INFO">Repeating keyword, round 2/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.515" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.515" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.514" endtime="20220924 19:06:56.533"/>
+</kw>
+<msg timestamp="20220924 19:06:56.533" level="INFO">Repeating keyword, round 3/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.533" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.533" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.533" endtime="20220924 19:06:56.563"/>
+</kw>
+<msg timestamp="20220924 19:06:56.563" level="INFO">Repeating keyword, round 4/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.564" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.564" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.564" endtime="20220924 19:06:56.586"/>
+</kw>
+<msg timestamp="20220924 19:06:56.586" level="INFO">Repeating keyword, round 5/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.587" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.587" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.586" endtime="20220924 19:06:56.610"/>
+</kw>
+<msg timestamp="20220924 19:06:56.610" level="INFO">Repeating keyword, round 6/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.610" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.611" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.610" endtime="20220924 19:06:56.627"/>
+</kw>
+<msg timestamp="20220924 19:06:56.627" level="INFO">Repeating keyword, round 7/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.628" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.628" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.628" endtime="20220924 19:06:56.646"/>
+</kw>
+<msg timestamp="20220924 19:06:56.646" level="INFO">Repeating keyword, round 8/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.647" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.647" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.646" endtime="20220924 19:06:56.673"/>
+</kw>
+<msg timestamp="20220924 19:06:56.673" level="INFO">Repeating keyword, round 9/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.673" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.674" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.673" endtime="20220924 19:06:56.700"/>
+</kw>
+<msg timestamp="20220924 19:06:56.700" level="INFO">Repeating keyword, round 10/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.701" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.701" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.701" endtime="20220924 19:06:56.717"/>
+</kw>
+<msg timestamp="20220924 19:06:56.717" level="INFO">Repeating keyword, round 11/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.718" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.718" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.717" endtime="20220924 19:06:56.730"/>
+</kw>
+<msg timestamp="20220924 19:06:56.730" level="INFO">Repeating keyword, round 12/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.730" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.730" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.730" endtime="20220924 19:06:56.751"/>
+</kw>
+<msg timestamp="20220924 19:06:56.751" level="INFO">Repeating keyword, round 13/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.751" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.751" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.751" endtime="20220924 19:06:56.771"/>
+</kw>
+<msg timestamp="20220924 19:06:56.772" level="INFO">Repeating keyword, round 14/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.772" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.772" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.772" endtime="20220924 19:06:56.784"/>
+</kw>
+<msg timestamp="20220924 19:06:56.784" level="INFO">Repeating keyword, round 15/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.785" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.785" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.784" endtime="20220924 19:06:56.814"/>
+</kw>
+<msg timestamp="20220924 19:06:56.814" level="INFO">Repeating keyword, round 16/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.815" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.815" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.814" endtime="20220924 19:06:56.828"/>
+</kw>
+<msg timestamp="20220924 19:06:56.828" level="INFO">Repeating keyword, round 17/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.828" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.829" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.828" endtime="20220924 19:06:56.838"/>
+</kw>
+<msg timestamp="20220924 19:06:56.839" level="INFO">Repeating keyword, round 18/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.839" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.839" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.839" endtime="20220924 19:06:56.865"/>
+</kw>
+<msg timestamp="20220924 19:06:56.865" level="INFO">Repeating keyword, round 19/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.866" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.866" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.865" endtime="20220924 19:06:56.900"/>
+</kw>
+<msg timestamp="20220924 19:06:56.900" level="INFO">Repeating keyword, round 20/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.901" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.901" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.901" endtime="20220924 19:06:56.912"/>
+</kw>
+<msg timestamp="20220924 19:06:56.912" level="INFO">Repeating keyword, round 21/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.913" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.913" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.912" endtime="20220924 19:06:56.934"/>
+</kw>
+<msg timestamp="20220924 19:06:56.934" level="INFO">Repeating keyword, round 22/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.935" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.935" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.934" endtime="20220924 19:06:56.950"/>
+</kw>
+<msg timestamp="20220924 19:06:56.950" level="INFO">Repeating keyword, round 23/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.951" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.951" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.950" endtime="20220924 19:06:56.962"/>
+</kw>
+<msg timestamp="20220924 19:06:56.962" level="INFO">Repeating keyword, round 24/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.963" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.963" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.963" endtime="20220924 19:06:56.979"/>
+</kw>
+<msg timestamp="20220924 19:06:56.979" level="INFO">Repeating keyword, round 25/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.979" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.979" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.979" endtime="20220924 19:06:56.991"/>
+</kw>
+<msg timestamp="20220924 19:06:56.991" level="INFO">Repeating keyword, round 26/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:56.991" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:56.991" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:56.991" endtime="20220924 19:06:57.005"/>
+</kw>
+<msg timestamp="20220924 19:06:57.005" level="INFO">Repeating keyword, round 27/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.006" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.006" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.006" endtime="20220924 19:06:57.023"/>
+</kw>
+<msg timestamp="20220924 19:06:57.023" level="INFO">Repeating keyword, round 28/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.024" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.024" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.023" endtime="20220924 19:06:57.038"/>
+</kw>
+<msg timestamp="20220924 19:06:57.038" level="INFO">Repeating keyword, round 29/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.039" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.039" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.038" endtime="20220924 19:06:57.054"/>
+</kw>
+<msg timestamp="20220924 19:06:57.055" level="INFO">Repeating keyword, round 30/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.055" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.055" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.055" endtime="20220924 19:06:57.069"/>
+</kw>
+<msg timestamp="20220924 19:06:57.070" level="INFO">Repeating keyword, round 31/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.070" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.070" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.070" endtime="20220924 19:06:57.085"/>
+</kw>
+<msg timestamp="20220924 19:06:57.085" level="INFO">Repeating keyword, round 32/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.086" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.086" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.085" endtime="20220924 19:06:57.102"/>
+</kw>
+<msg timestamp="20220924 19:06:57.102" level="INFO">Repeating keyword, round 33/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.103" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.103" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.102" endtime="20220924 19:06:57.115"/>
+</kw>
+<msg timestamp="20220924 19:06:57.115" level="INFO">Repeating keyword, round 34/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.115" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.115" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.115" endtime="20220924 19:06:57.125"/>
+</kw>
+<msg timestamp="20220924 19:06:57.125" level="INFO">Repeating keyword, round 35/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.126" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.126" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.125" endtime="20220924 19:06:57.141"/>
+</kw>
+<msg timestamp="20220924 19:06:57.141" level="INFO">Repeating keyword, round 36/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.142" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.142" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.141" endtime="20220924 19:06:57.153"/>
+</kw>
+<msg timestamp="20220924 19:06:57.153" level="INFO">Repeating keyword, round 37/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.154" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.154" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.153" endtime="20220924 19:06:57.167"/>
+</kw>
+<msg timestamp="20220924 19:06:57.167" level="INFO">Repeating keyword, round 38/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.168" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.168" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.167" endtime="20220924 19:06:57.181"/>
+</kw>
+<msg timestamp="20220924 19:06:57.181" level="INFO">Repeating keyword, round 39/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.182" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.182" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.182" endtime="20220924 19:06:57.193"/>
+</kw>
+<msg timestamp="20220924 19:06:57.194" level="INFO">Repeating keyword, round 40/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.194" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.194" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.194" endtime="20220924 19:06:57.209"/>
+</kw>
+<msg timestamp="20220924 19:06:57.209" level="INFO">Repeating keyword, round 41/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.210" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.210" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.209" endtime="20220924 19:06:57.221"/>
+</kw>
+<msg timestamp="20220924 19:06:57.221" level="INFO">Repeating keyword, round 42/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.221" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.222" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.221" endtime="20220924 19:06:57.235"/>
+</kw>
+<msg timestamp="20220924 19:06:57.235" level="INFO">Repeating keyword, round 43/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.236" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.236" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.236" endtime="20220924 19:06:57.247"/>
+</kw>
+<msg timestamp="20220924 19:06:57.247" level="INFO">Repeating keyword, round 44/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.248" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.248" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.247" endtime="20220924 19:06:57.261"/>
+</kw>
+<msg timestamp="20220924 19:06:57.261" level="INFO">Repeating keyword, round 45/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.261" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.261" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.261" endtime="20220924 19:06:57.276"/>
+</kw>
+<msg timestamp="20220924 19:06:57.276" level="INFO">Repeating keyword, round 46/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.277" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.277" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.276" endtime="20220924 19:06:57.297"/>
+</kw>
+<msg timestamp="20220924 19:06:57.297" level="INFO">Repeating keyword, round 47/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.298" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.298" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.297" endtime="20220924 19:06:57.308"/>
+</kw>
+<msg timestamp="20220924 19:06:57.308" level="INFO">Repeating keyword, round 48/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.308" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.309" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.308" endtime="20220924 19:06:57.322"/>
+</kw>
+<msg timestamp="20220924 19:06:57.322" level="INFO">Repeating keyword, round 49/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.323" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.323" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.323" endtime="20220924 19:06:57.347"/>
+</kw>
+<msg timestamp="20220924 19:06:57.348" level="INFO">Repeating keyword, round 50/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.349" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.349" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.348" endtime="20220924 19:06:57.374"/>
+</kw>
+<msg timestamp="20220924 19:06:57.374" level="INFO">Repeating keyword, round 51/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.374" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.374" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.374" endtime="20220924 19:06:57.397"/>
+</kw>
+<msg timestamp="20220924 19:06:57.397" level="INFO">Repeating keyword, round 52/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.398" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.398" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.397" endtime="20220924 19:06:57.419"/>
+</kw>
+<msg timestamp="20220924 19:06:57.419" level="INFO">Repeating keyword, round 53/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.420" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.420" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.419" endtime="20220924 19:06:57.432"/>
+</kw>
+<msg timestamp="20220924 19:06:57.432" level="INFO">Repeating keyword, round 54/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.433" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.433" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.432" endtime="20220924 19:06:57.446"/>
+</kw>
+<msg timestamp="20220924 19:06:57.446" level="INFO">Repeating keyword, round 55/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.447" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.447" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.446" endtime="20220924 19:06:57.458"/>
+</kw>
+<msg timestamp="20220924 19:06:57.458" level="INFO">Repeating keyword, round 56/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.458" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.459" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.458" endtime="20220924 19:06:57.475"/>
+</kw>
+<msg timestamp="20220924 19:06:57.475" level="INFO">Repeating keyword, round 57/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.476" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.476" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.475" endtime="20220924 19:06:57.486"/>
+</kw>
+<msg timestamp="20220924 19:06:57.486" level="INFO">Repeating keyword, round 58/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.487" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.487" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.486" endtime="20220924 19:06:57.499"/>
+</kw>
+<msg timestamp="20220924 19:06:57.499" level="INFO">Repeating keyword, round 59/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.500" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.500" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.499" endtime="20220924 19:06:57.512"/>
+</kw>
+<msg timestamp="20220924 19:06:57.512" level="INFO">Repeating keyword, round 60/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.513" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.513" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.512" endtime="20220924 19:06:57.522"/>
+</kw>
+<msg timestamp="20220924 19:06:57.522" level="INFO">Repeating keyword, round 61/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.522" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.523" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.522" endtime="20220924 19:06:57.534"/>
+</kw>
+<msg timestamp="20220924 19:06:57.534" level="INFO">Repeating keyword, round 62/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.535" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.535" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.534" endtime="20220924 19:06:57.546"/>
+</kw>
+<msg timestamp="20220924 19:06:57.546" level="INFO">Repeating keyword, round 63/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.547" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.547" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.547" endtime="20220924 19:06:57.559"/>
+</kw>
+<msg timestamp="20220924 19:06:57.559" level="INFO">Repeating keyword, round 64/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.560" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.560" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.559" endtime="20220924 19:06:57.572"/>
+</kw>
+<msg timestamp="20220924 19:06:57.572" level="INFO">Repeating keyword, round 65/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.573" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.573" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.573" endtime="20220924 19:06:57.614"/>
+</kw>
+<msg timestamp="20220924 19:06:57.614" level="INFO">Repeating keyword, round 66/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.614" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.614" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.614" endtime="20220924 19:06:57.621"/>
+</kw>
+<msg timestamp="20220924 19:06:57.622" level="INFO">Repeating keyword, round 67/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.622" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.622" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.622" endtime="20220924 19:06:57.634"/>
+</kw>
+<msg timestamp="20220924 19:06:57.634" level="INFO">Repeating keyword, round 68/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.634" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.634" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.634" endtime="20220924 19:06:57.645"/>
+</kw>
+<msg timestamp="20220924 19:06:57.646" level="INFO">Repeating keyword, round 69/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.646" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.646" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.646" endtime="20220924 19:06:57.660"/>
+</kw>
+<msg timestamp="20220924 19:06:57.660" level="INFO">Repeating keyword, round 70/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.660" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.661" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.660" endtime="20220924 19:06:57.672"/>
+</kw>
+<msg timestamp="20220924 19:06:57.672" level="INFO">Repeating keyword, round 71/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.673" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.673" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.672" endtime="20220924 19:06:57.682"/>
+</kw>
+<msg timestamp="20220924 19:06:57.682" level="INFO">Repeating keyword, round 72/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.683" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.683" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.682" endtime="20220924 19:06:57.694"/>
+</kw>
+<msg timestamp="20220924 19:06:57.694" level="INFO">Repeating keyword, round 73/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.694" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.694" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.694" endtime="20220924 19:06:57.703"/>
+</kw>
+<msg timestamp="20220924 19:06:57.703" level="INFO">Repeating keyword, round 74/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.704" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.704" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.704" endtime="20220924 19:06:57.715"/>
+</kw>
+<msg timestamp="20220924 19:06:57.715" level="INFO">Repeating keyword, round 75/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.716" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.716" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.715" endtime="20220924 19:06:57.724"/>
+</kw>
+<msg timestamp="20220924 19:06:57.724" level="INFO">Repeating keyword, round 76/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.725" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.725" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.724" endtime="20220924 19:06:57.742"/>
+</kw>
+<msg timestamp="20220924 19:06:57.742" level="INFO">Repeating keyword, round 77/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.742" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.742" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.742" endtime="20220924 19:06:57.750"/>
+</kw>
+<msg timestamp="20220924 19:06:57.751" level="INFO">Repeating keyword, round 78/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.751" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.751" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.751" endtime="20220924 19:06:57.766"/>
+</kw>
+<msg timestamp="20220924 19:06:57.766" level="INFO">Repeating keyword, round 79/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.767" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.767" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.767" endtime="20220924 19:06:57.776"/>
+</kw>
+<msg timestamp="20220924 19:06:57.776" level="INFO">Repeating keyword, round 80/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.777" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.777" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.776" endtime="20220924 19:06:57.794"/>
+</kw>
+<msg timestamp="20220924 19:06:57.794" level="INFO">Repeating keyword, round 81/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.795" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.795" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.794" endtime="20220924 19:06:57.804"/>
+</kw>
+<msg timestamp="20220924 19:06:57.804" level="INFO">Repeating keyword, round 82/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.805" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.805" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.804" endtime="20220924 19:06:57.821"/>
+</kw>
+<msg timestamp="20220924 19:06:57.822" level="INFO">Repeating keyword, round 83/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.822" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.822" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.822" endtime="20220924 19:06:57.834"/>
+</kw>
+<msg timestamp="20220924 19:06:57.834" level="INFO">Repeating keyword, round 84/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.835" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.835" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.834" endtime="20220924 19:06:57.843"/>
+</kw>
+<msg timestamp="20220924 19:06:57.843" level="INFO">Repeating keyword, round 85/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.843" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.843" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.843" endtime="20220924 19:06:57.849"/>
+</kw>
+<msg timestamp="20220924 19:06:57.849" level="INFO">Repeating keyword, round 86/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.850" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.850" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.849" endtime="20220924 19:06:57.865"/>
+</kw>
+<msg timestamp="20220924 19:06:57.866" level="INFO">Repeating keyword, round 87/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.866" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.866" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.866" endtime="20220924 19:06:57.875"/>
+</kw>
+<msg timestamp="20220924 19:06:57.875" level="INFO">Repeating keyword, round 88/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.876" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.876" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.875" endtime="20220924 19:06:57.894"/>
+</kw>
+<msg timestamp="20220924 19:06:57.894" level="INFO">Repeating keyword, round 89/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.895" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.895" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.894" endtime="20220924 19:06:57.909"/>
+</kw>
+<msg timestamp="20220924 19:06:57.909" level="INFO">Repeating keyword, round 90/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.910" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.910" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.909" endtime="20220924 19:06:57.922"/>
+</kw>
+<msg timestamp="20220924 19:06:57.922" level="INFO">Repeating keyword, round 91/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.922" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.923" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.922" endtime="20220924 19:06:57.934"/>
+</kw>
+<msg timestamp="20220924 19:06:57.934" level="INFO">Repeating keyword, round 92/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.935" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.935" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.934" endtime="20220924 19:06:57.945"/>
+</kw>
+<msg timestamp="20220924 19:06:57.946" level="INFO">Repeating keyword, round 93/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.946" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.946" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.946" endtime="20220924 19:06:57.958"/>
+</kw>
+<msg timestamp="20220924 19:06:57.958" level="INFO">Repeating keyword, round 94/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.959" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.959" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.958" endtime="20220924 19:06:57.972"/>
+</kw>
+<msg timestamp="20220924 19:06:57.973" level="INFO">Repeating keyword, round 95/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.973" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.973" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.973" endtime="20220924 19:06:57.983"/>
+</kw>
+<msg timestamp="20220924 19:06:57.983" level="INFO">Repeating keyword, round 96/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:57.984" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:57.984" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:57.983" endtime="20220924 19:06:58.001"/>
+</kw>
+<msg timestamp="20220924 19:06:58.001" level="INFO">Repeating keyword, round 97/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.002" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.002" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.001" endtime="20220924 19:06:58.009"/>
+</kw>
+<msg timestamp="20220924 19:06:58.010" level="INFO">Repeating keyword, round 98/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.010" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.010" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.010" endtime="20220924 19:06:58.028"/>
+</kw>
+<msg timestamp="20220924 19:06:58.028" level="INFO">Repeating keyword, round 99/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.028" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.028" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.028" endtime="20220924 19:06:58.036"/>
+</kw>
+<msg timestamp="20220924 19:06:58.036" level="INFO">Repeating keyword, round 100/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.036" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.036" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.036" endtime="20220924 19:06:58.045"/>
+</kw>
+<msg timestamp="20220924 19:06:58.045" level="INFO">Repeating keyword, round 101/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.046" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.046" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.045" endtime="20220924 19:06:58.055"/>
+</kw>
+<msg timestamp="20220924 19:06:58.055" level="INFO">Repeating keyword, round 102/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.056" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.056" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.056" endtime="20220924 19:06:58.063"/>
+</kw>
+<msg timestamp="20220924 19:06:58.063" level="INFO">Repeating keyword, round 103/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.064" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.064" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.064" endtime="20220924 19:06:58.076"/>
+</kw>
+<msg timestamp="20220924 19:06:58.076" level="INFO">Repeating keyword, round 104/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.077" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.077" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.076" endtime="20220924 19:06:58.085"/>
+</kw>
+<msg timestamp="20220924 19:06:58.085" level="INFO">Repeating keyword, round 105/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.086" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.086" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.085" endtime="20220924 19:06:58.096"/>
+</kw>
+<msg timestamp="20220924 19:06:58.096" level="INFO">Repeating keyword, round 106/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.097" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.097" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.096" endtime="20220924 19:06:58.107"/>
+</kw>
+<msg timestamp="20220924 19:06:58.107" level="INFO">Repeating keyword, round 107/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.108" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.108" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.107" endtime="20220924 19:06:58.115"/>
+</kw>
+<msg timestamp="20220924 19:06:58.115" level="INFO">Repeating keyword, round 108/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.115" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.115" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.115" endtime="20220924 19:06:58.127"/>
+</kw>
+<msg timestamp="20220924 19:06:58.127" level="INFO">Repeating keyword, round 109/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.128" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.128" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.127" endtime="20220924 19:06:58.135"/>
+</kw>
+<msg timestamp="20220924 19:06:58.135" level="INFO">Repeating keyword, round 110/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.135" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.135" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.135" endtime="20220924 19:06:58.140"/>
+</kw>
+<msg timestamp="20220924 19:06:58.140" level="INFO">Repeating keyword, round 111/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.140" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.140" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.140" endtime="20220924 19:06:58.147"/>
+</kw>
+<msg timestamp="20220924 19:06:58.147" level="INFO">Repeating keyword, round 112/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.148" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.148" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.147" endtime="20220924 19:06:58.157"/>
+</kw>
+<msg timestamp="20220924 19:06:58.157" level="INFO">Repeating keyword, round 113/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.158" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.158" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.157" endtime="20220924 19:06:58.162"/>
+</kw>
+<msg timestamp="20220924 19:06:58.162" level="INFO">Repeating keyword, round 114/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.162" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.163" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.162" endtime="20220924 19:06:58.174"/>
+</kw>
+<msg timestamp="20220924 19:06:58.174" level="INFO">Repeating keyword, round 115/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.175" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.175" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.174" endtime="20220924 19:06:58.184"/>
+</kw>
+<msg timestamp="20220924 19:06:58.184" level="INFO">Repeating keyword, round 116/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.184" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.184" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.184" endtime="20220924 19:06:58.189"/>
+</kw>
+<msg timestamp="20220924 19:06:58.189" level="INFO">Repeating keyword, round 117/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.189" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.190" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.189" endtime="20220924 19:06:58.195"/>
+</kw>
+<msg timestamp="20220924 19:06:58.195" level="INFO">Repeating keyword, round 118/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.196" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.196" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.196" endtime="20220924 19:06:58.204"/>
+</kw>
+<msg timestamp="20220924 19:06:58.204" level="INFO">Repeating keyword, round 119/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.204" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.205" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.204" endtime="20220924 19:06:58.211"/>
+</kw>
+<msg timestamp="20220924 19:06:58.211" level="INFO">Repeating keyword, round 120/120.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220924 19:06:58.211" level="INFO">Sending key(s) ('a',) to page.</msg>
+<msg timestamp="20220924 19:06:58.211" level="INFO">Sending key a</msg>
+<status status="PASS" starttime="20220924 19:06:58.211" endtime="20220924 19:06:58.215"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:56.445" endtime="20220924 19:06:58.215"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//p[@class='dc-text closing-account-reasons__hint' and contains(.,'Remaining characters: 0')]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220924 19:06:58.215" endtime="20220924 19:06:58.244"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//p[@class='dc-text closing-account-reasons__hint' and contains(.,'Remaining characters: 0')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220924 19:06:58.254" level="INFO">Current page contains element '//p[@class='dc-text closing-account-reasons__hint' and contains(.,'Remaining characters: 0')]'.</msg>
+<status status="PASS" starttime="20220924 19:06:58.244" endtime="20220924 19:06:58.254"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:56.266" endtime="20220924 19:06:58.254"/>
+</test>
+<test id="s1-t12" name="TC07: User presses “Back” button" line="96">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--secondary dc-btn__large']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:58.255" level="INFO">Clicking element '//button[@class='dc-btn dc-btn__effect dc-btn--secondary dc-btn__large']'.</msg>
+<status status="PASS" starttime="20220924 19:06:58.255" endtime="20220924 19:06:58.350"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220924 19:06:58.350" endtime="20220924 19:06:58.389"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220924 19:06:58.395" level="INFO">Current page contains element '//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']'.</msg>
+<status status="PASS" starttime="20220924 19:06:58.389" endtime="20220924 19:06:58.395"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:58.255" endtime="20220924 19:06:58.395"/>
+</test>
+<test id="s1-t13" name="Provide a state which satisfies prequesites to test TC08" line="102">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220924 19:06:58.396" endtime="20220924 19:06:58.413"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:58.414" level="INFO">Clicking element '//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']'.</msg>
+<status status="PASS" starttime="20220924 19:06:58.414" endtime="20220924 19:06:58.466"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(., 'I have other financial priorities.')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:58.466" level="INFO">Clicking element '//span[contains(., 'I have other financial priorities.')]'.</msg>
+<status status="PASS" starttime="20220924 19:06:58.466" endtime="20220924 19:06:58.510"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:58.396" endtime="20220924 19:06:58.510"/>
+</test>
+<test id="s1-t14" name="TC08.1: User presses “Continue” button" line="107">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220924 19:06:58.512" endtime="20220924 19:06:58.556"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:58.558" level="INFO">Clicking element '//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']'.</msg>
+<status status="PASS" starttime="20220924 19:06:58.557" endtime="20220924 19:06:58.662"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:58.662" endtime="20220924 19:06:58.681"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220924 19:06:58.724" level="INFO">Current page contains element '//div[@class='account-closure-warning-modal']'.</msg>
+<status status="PASS" starttime="20220924 19:06:58.681" endtime="20220924 19:06:58.724"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:58.511" endtime="20220924 19:06:58.724"/>
+</test>
+<test id="s1-t15" name="TC08.2: After user presses &quot;Continue&quot; button, user presses &quot;Go Back&quot; on account closure warning page" line="114">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--secondary dc-btn__large' and contains(.,'Go Back')]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:58.726" endtime="20220924 19:06:58.741"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--secondary dc-btn__large' and contains(.,'Go Back')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:58.742" level="INFO">Clicking element '//button[@class='dc-btn dc-btn__effect dc-btn--secondary dc-btn__large' and contains(.,'Go Back')]'.</msg>
+<status status="PASS" starttime="20220924 19:06:58.741" endtime="20220924 19:06:58.924"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:58.924" endtime="20220924 19:06:59.354"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220924 19:06:59.360" level="INFO">Current page does not contain element '//div[@class='account-closure-warning-modal']'.</msg>
+<status status="PASS" starttime="20220924 19:06:59.355" endtime="20220924 19:06:59.360"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:58.725" endtime="20220924 19:06:59.361"/>
+</test>
+<test id="s1-t16" name="TC08.3: After user presses &quot;Continue&quot; button, user presses &quot;Close Account&quot; on account closure warning page" line="121">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220924 19:06:59.362" endtime="20220924 19:06:59.379"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:59.380" level="INFO">Clicking element '//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']'.</msg>
+<status status="PASS" starttime="20220924 19:06:59.380" endtime="20220924 19:06:59.454"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:59.454" endtime="20220924 19:06:59.498"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220924 19:06:59.508" level="INFO">Current page contains element '//div[@class='account-closure-warning-modal']'.</msg>
+<status status="PASS" starttime="20220924 19:06:59.498" endtime="20220924 19:06:59.508"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large' and contains(.,'Close account')]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:59.508" endtime="20220924 19:06:59.520"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large' and contains(.,'Close account')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:06:59.521" level="INFO">Clicking element '//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large' and contains(.,'Close account')]'.</msg>
+<status status="PASS" starttime="20220924 19:06:59.520" endtime="20220924 19:06:59.714"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220924 19:06:59.714" endtime="20220924 19:06:59.751"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220924 19:06:59.763" level="INFO">Current page does not contain element '//div[@class='account-closure-warning-modal']'.</msg>
+<status status="PASS" starttime="20220924 19:06:59.751" endtime="20220924 19:06:59.764"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:59.361" endtime="20220924 19:06:59.764"/>
+</test>
+<test id="s1-t17" name="TC09: If user tries to relogin using previously deleted account, ask user to confirm if they wish to rejoin Deriv" line="134">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220924 19:06:59.766" endtime="20220924 19:06:59.828"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://app.deriv.com/account/closing-account</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220924 19:06:59.829" level="INFO">Opening browser 'chrome' to base url 'https://app.deriv.com/account/closing-account'.</msg>
+<status status="PASS" starttime="20220924 19:06:59.829" endtime="20220924 19:07:03.032"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220924 19:07:03.032" endtime="20220924 19:07:03.136"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 19:07:03.137" endtime="20220924 19:07:05.990"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>set own email</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220924 19:07:05.991" level="INFO">Typing text 'set own email' into text field '//input[@type='email']'.</msg>
+<status status="PASS" starttime="20220924 19:07:05.990" endtime="20220924 19:07:06.059"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='password']</arg>
+<arg>set own password</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220924 19:07:06.059" level="INFO">Typing text 'set own password' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20220924 19:07:06.059" endtime="20220924 19:07:06.113"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 19:07:06.114" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220924 19:07:06.114" endtime="20220924 19:07:06.696"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Want to start trading on Deriv again?</arg>
+<arg>10</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 19:07:06.696" endtime="20220924 19:07:06.720"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Want to start trading on Deriv again?</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220924 19:07:06.729" level="INFO">Current page contains text 'Want to start trading on Deriv again?'.</msg>
+<status status="PASS" starttime="20220924 19:07:06.720" endtime="20220924 19:07:06.729"/>
+</kw>
+<status status="PASS" starttime="20220924 19:06:59.765" endtime="20220924 19:07:06.729"/>
+</test>
+<status status="PASS" starttime="20220924 19:06:36.208" endtime="20220924 19:07:06.729"/>
+</suite>
+<statistics>
+<total>
+<stat pass="17" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="17" fail="0" skip="0" id="s1" name="Close">Close</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -33,16 +33,16 @@
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@type='email']</arg>
-<arg>tanwei3816@gmail.com</arg>
+<arg>set own email</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220922 17:46:30.877" level="INFO">Typing text 'tanwei3816@gmail.com' into text field '//input[@type='email']'.</msg>
+<msg timestamp="20220922 17:46:30.877" level="INFO">Typing text 'set own email' into text field '//input[@type='email']'.</msg>
 <status status="PASS" starttime="20220922 17:46:30.876" endtime="20220922 17:46:30.931"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@type='password']</arg>
-<arg>e/K3L@y@YMwfnx6</arg>
+<arg>set own password</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220922 17:46:30.932" level="INFO">Typing text 'e/K3L@y@YMwfnx6' into text field '//input[@type='password']'.</msg>
+<msg timestamp="20220922 17:46:30.932" level="INFO">Typing text 'set own password' into text field '//input[@type='password']'.</msg>
 <status status="PASS" starttime="20220922 17:46:30.932" endtime="20220922 17:46:30.986"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
